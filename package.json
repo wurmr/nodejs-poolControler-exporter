@@ -15,7 +15,8 @@
   },
   "scripts": {
     "dev": "npx ts-node-dev src/server.ts",
-    "start": "npx ts-node src/server.ts"
+    "start": "npx ts-node src/server.ts",
+    "build": "npx tsc"
   },
   "keywords": [],
   "author": "",
