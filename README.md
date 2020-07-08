@@ -1,6 +1,6 @@
 # nodejs-poolControler-exporter
 
-![Docker](https://github.com/wurmr/nodejs-poolControler-exporter/workflows/Docker/badge.svg)
+![Docker](https://github.com/wurmr/nodejs-poolControler-exporter/workflows/Docker/badge.svg?event=push)
 
 Prometheus exporter for [tagyoureit/nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController)
 
