@@ -10,5 +10,5 @@ WORKDIR /usr/lib/nodejs-poolController-exporter
 COPY --from=builder /WORK/dist ./
 COPY --from=builder /WORK/node_modules ./node_modules
 COPY --from=builder /WORK/LICENSE .
-EXPOSE [9100]
+EXPOSE 9100
 ENTRYPOINT ["node", "server.js"]
