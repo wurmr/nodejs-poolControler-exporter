@@ -1,0 +1,12 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.112.0/containers/javascript-node-12
+{
+  "name": "node:lts",
+  "image": "node:lts",
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+  "forwardPorts": [9100],
+  "mounts": [
+    "source=nodejs-poolcontroller-exporter-modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ]
+}
