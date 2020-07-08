@@ -1,5 +1,7 @@
 # nodejs-poolControler-exporter
 
+![Docker](https://github.com/wurmr/nodejs-poolControler-exporter/workflows/Docker/badge.svg)
+
 Prometheus exporter for [tagyoureit/nodejs-poolController](https://github.com/tagyoureit/nodejs-poolController)
 
 ## Metrics
