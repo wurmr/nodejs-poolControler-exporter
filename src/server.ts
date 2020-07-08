@@ -3,9 +3,9 @@ import got from 'got'
 const app = express()
 
 interface State {
-  temps: {
-    waterSensor1: Number
-    air: Number
+  temps?: {
+    waterSensor1?: Number
+    air?: Number
   }
   pumps: Array<Pump>
   chlorinators: Array<Chlorinator>
@@ -33,11 +33,11 @@ app.get('/metrics', async function (req, res) {
   const metrics = [
     createMetric(
       'pool_water_temp',
-      state.temps.waterSensor1,
+      state.temps?.waterSensor1,
       'Pool Water Temperature',
       'gauge'
     ),
-    createMetric('pool_air_temp', state.temps.air, 'Air Temperature', 'gauge'),
+    createMetric('pool_air_temp', state.temps?.air, 'Air Temperature', 'gauge'),
     createMetric('pool_pump_rpm', state.pumps[0].rpm, 'Pump RPM', 'gauge'),
     createMetric(
       'pool_pump_watts',
@@ -58,10 +58,12 @@ app.get('/metrics', async function (req, res) {
 
 const createMetric = (
   name: string,
-  value: Number,
+  value?: Number,
   help?: string,
   type?: string
 ): string => {
+  if (!value) return ''
+
   const metric = []
   if (help) metric.push(`# HELP ${name} ${help}`)
   if (type) metric.push(`# TYPE ${name} ${type}`)
