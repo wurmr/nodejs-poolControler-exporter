@@ -14,8 +14,8 @@
     "typescript": "^3.9.5"
   },
   "scripts": {
-    "dev": "npx ts-node-dev server.ts",
-    "start": "npx ts-node server.ts"
+    "dev": "npx ts-node-dev src/server.ts",
+    "start": "npx ts-node src/server.ts"
   },
   "keywords": [],
   "author": "",
